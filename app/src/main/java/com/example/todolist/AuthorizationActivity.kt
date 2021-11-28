@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.authorization.*
 
 class AuthorizationActivity: AppCompatActivity() {
+    override fun onBackPressed(){}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
@@ -29,5 +30,4 @@ class AuthorizationActivity: AppCompatActivity() {
             }
         }
     }
-
 }
