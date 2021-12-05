@@ -2,6 +2,7 @@ package com.example.todolist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
             val todoTitle = etTodoTitle.text.toString()
             if(todoTitle.isNotEmpty()){
                 val todo = TodoItem(todoTitle)
+                Log.i("todoAdapter", todoAdapter.getItems().toString())
+                Log.i("todo", todo.toString())
                 todoAdapter.addTodo(todo)
                 etTodoTitle.text.clear()
             }

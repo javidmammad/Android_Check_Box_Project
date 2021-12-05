@@ -60,4 +60,8 @@ class TodoAdapter(
         override fun getItemCount(): Int {
             return  todoItems.size
         }
+
+        fun getItems(): MutableList<TodoItem> {
+            return  todoItems
+        }
     }
